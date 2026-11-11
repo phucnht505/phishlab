@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo giao hàng</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f9; margin: 0; padding: 20px; color: #333333; }
+        .email-card { max-width: 560px; margin: 0 auto; background: #ffffff; border-radius: 8px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .header { background-color: #d97706; padding: 20px; text-align: center; color: #ffffff; }
+        .header h2 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: 0.5px; }
+        .content { padding: 30px 24px; line-height: 1.6; }
+        .tracking-box { background-color: #fffbe8; border: 1px dashed #f59e0b; padding: 12px; border-radius: 6px; margin: 15px 0; font-size: 14px; }
+        .btn-wrapper { text-align: center; margin: 25px 0; }
+        .btn { display: inline-block; padding: 12px 28px; background-color: #d97706; color: #ffffff !important; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 15px; }
+        .btn:hover { background-color: #b45309; }
+        .footer { background-color: #f8fafc; padding: 16px 24px; font-size: 12px; color: #64748b; border-top: 1px solid #e2e8f0; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="email-card">
+        <div class="header">
+            <h2>PHISHLAB • DELIVERY NOTICE</h2>
+        </div>
+        <div class="content">
+            <p>Xin chào <strong>Người tham gia</strong>,</p>
+            <p>Bộ phận điều phối vừa nhận được thông báo về một kiện hàng/bưu kiện được gửi đến tên bạn tại văn phòng.</p>
+            <div class="tracking-box">
+                <strong>Mã kiện hàng:</strong> ATHTTT-122026<br>
+                <strong>Trạng thái:</strong> Tạm giữ do chưa xác nhận thông tin người nhận.
+            </div>
+            <p>Vui lòng kiểm tra xem bạn có đang chờ nhận kiện hàng này không và xác nhận lại địa chỉ giao nhận qua đường dẫn bên dưới.</p>
+            <div class="btn-wrapper">
+                <a href="{{.URL}}" class="btn">Xác nhận kiện hàng thử nghiệm</a>
+            </div>
+            <p>Trân trọng,<br><strong>PhishLab Logistics Services</strong></p>
+        </div>
+        <div class="footer">
+            Bạn nhận được email mô phỏng này trong môi trường đào tạo nhận thức an toàn thông tin.
+        </div>
+    </div>
+</body>
+</html>

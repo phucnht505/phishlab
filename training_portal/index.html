@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishLab • Bài Kiểm Tra Nhận Thức An Toàn Thông Tin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <span class="badge">PhishLab Assessment</span>
+            <h1>Kiểm Tra Nhận Diện Phishing</h1>
+            <p>Hoàn thành 3 câu hỏi trắc nghiệm dưới đây để đánh giá khả năng phát hiện email lừa đảo.</p>
+        </div>
+
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div id="quiz-screen">
+            <div class="question-number" id="question-number">Câu hỏi 1 / 3</div>
+            <h2 class="question-text" id="question-text">Đang tải câu hỏi...</h2>
+            
+            <div class="scenario-box" id="scenario-box"></div>
+            <div class="options-group" id="options-group"></div>
+            <div class="explanation-box" id="explanation-box"></div>
+
+            <button class="btn-next" id="btn-next" disabled>Câu tiếp theo</button>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <div class="score-circle" id="score-circle">
+                <span id="score-text">0/3</span>
+            </div>
+            <h2 id="result-title">Kết Quả Đánh Giá</h2>
+            <p id="result-desc"></p>
+
+            <button class="btn-restart" onclick="restartQuiz()">Làm lại bài kiểm tra</button>
+        </div>
+    </div>
+
+    <script src="js/quiz.js"></script>
+</body>
+</html>

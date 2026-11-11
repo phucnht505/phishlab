@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishLab • Security Awareness Training</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-red: #f43f5e;
+            --accent-blue: #0284c7;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .badge {
+            background: rgba(2, 132, 199, 0.2);
+            color: #38bdf8;
+            border: 1px solid var(--accent-blue);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            color: var(--accent-red);
+            font-size: 26px;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .sub-title {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 30px 0;
+        }
+
+        .section-title {
+            text-align: left;
+            font-size: 18px;
+            color: #e2e8f0;
+            margin-bottom: 16px;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 36px;
+            margin-bottom: 16px;
+            line-height: 1.5;
+            color: #cbd5e1;
+            font-size: 15px;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: rgba(16, 185, 129, 0.2);
+            color: #34d399;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .info-box {
+            background-color: rgba(30, 41, 59, 0.8);
+            border-left: 4px solid var(--accent-blue);
+            padding: 16px;
+            border-radius: 4px;
+            text-align: left;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="badge">PhishLab Awareness</span>
+        <h1>Bạn vừa tương tác với một email mô phỏng!</h1>
+        <p class="sub-title">Đây là hoạt động thử nghiệm định kỳ nhằm nâng cao nhận thức an toàn thông tin nội bộ.</p>
+        
+        <hr class="divider">
+
+        <h3 class="section-title">5 Dấu hiệu giúp phát hiện email Phishing:</h3>
+        <ul class="checklist">
+            <li><strong>Địa chỉ người gửi bất thường:</strong> Kiểm tra kỹ đuôi email (domain) xem có khớp với tổ chức chính thức hay không.</li>
+            <li><strong>Tính chất hối thúc khẩn cấp:</strong> Thường đe dọa hoặc tạo áp lực thời gian (ví dụ: "trong vòng 24 giờ", "khẩn cấp").</li>
+            <li><strong>Đường dẫn (URL) không khớp:</strong> Rê chuột qua liên kết để kiểm tra địa chỉ thực tế trước khi nhấp.</li>
+            <li><strong>Nội dung bất thường:</strong> Lỗi chính tả, cách xưng hô chung chung hoặc thông báo nhận quà/bưu kiện bất ngờ.</li>
+            <li><strong>Yêu cầu thông tin nhạy cảm:</strong> Tổ chức uy tín hiếm khi yêu cầu bạn cung cấp mật khẩu, OTP hay thông tin cá nhân qua email.</li>
+        </ul>
+
+        <div class="info-box">
+            <strong>Thông điệp an toàn:</strong> Luôn luôn xác minh thông tin qua một kênh liên lạc độc lập (điện thoại, chat nội bộ) trước khi thực hiện các yêu cầu bất thường trong email.
+        </div>
+    </div>
+</body>
+</html>
