@@ -127,7 +127,7 @@ function Invoke-SpamAssassinScan {
         }
 
         # Scan email using spamc
-        $scanLines = & docker exec $ContainerName bash -lc "spamc -R < '$containerFile'" 2>&1
+        $scanLines = & docker exec $ContainerName bash -lc "spamc -x -d 127.0.0.1 -p 783 -R < '$containerFile'" 2>&1
 
         $scanExitCode = $LASTEXITCODE
         $scanOutput = ($scanLines | Out-String).Trim()
