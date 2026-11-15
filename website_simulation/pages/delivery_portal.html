@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Portal - PhishLab</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="simulation-card">
+        <span class="badge">Delivery Tracking Portal</span>
+
+        <h1>Thông tin theo dõi kiện hàng</h1>
+
+        <div class="browser-bar">
+            <span>Địa chỉ website trong tình huống (mô phỏng)</span>
+            <code>https://parcel.phishlab.test.ship-notice.example/track</code>
+        </div>
+
+        <div class="notice-box">
+            <h2>Thông báo giao hàng</h2>
+
+            <p>Mã kiện hàng: PL-DEMO-001</p>
+
+            <p>Trạng thái: Chờ xác nhận giao nhận.</p>
+
+            <p>Thông báo cho biết kiện hàng có thể bị trì hoãn nếu người nhận không xác minh thông tin.</p>
+
+            <p>Hãy quan sát và xác định các dấu hiệu đáng ngờ của website.</p>
+        </div>
+
+        <button class="action-button" data-toggle="clues">
+            Xem các dấu hiệu nhận diện
+        </button>
+
+        <section id="clues" class="clues" hidden>
+            <h3>Phân tích dấu hiệu phishing</h3>
+
+            <ul>
+                <li>Tên miền thực tế là ship-notice.example, không phải tên miền chính thức của đơn vị vận chuyển.</li>
+                <li>Thông báo kiện hàng bất ngờ cần được xác minh.</li>
+                <li>Nội dung tạo áp lực khiến người dùng phải xử lý nhanh.</li>
+                <li>Không cung cấp thông tin cá nhân hoặc thông tin thanh toán cho website chưa xác minh.</li>
+            </ul>
+        </section>
+
+        <a href="../index.html" class="back-link">
+            ← Quay lại danh sách tình huống
+        </a>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
