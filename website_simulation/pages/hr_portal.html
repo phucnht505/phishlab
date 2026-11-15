@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Benefits Portal - PhishLab</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="simulation-card">
+        <span class="badge">HR Benefits Portal</span>
+
+        <h1>Chương trình phúc lợi nội bộ</h1>
+
+        <div class="browser-bar">
+            <span>Địa chỉ website trong tình huống (mô phỏng)</span>
+            <code>https://benefits.phishlab.test.reward-check.example/register</code>
+        </div>
+
+        <div class="notice-box">
+            <h2>Thông báo chương trình phúc lợi</h2>
+
+            <p>Chương trình hỗ trợ phúc lợi nội bộ dành cho thành viên.</p>
+
+            <p>Thông báo yêu cầu người dùng xem thông tin chương trình và kiểm tra điều kiện tham gia trong vòng 24 giờ.</p>
+
+            <p>Hãy đánh giá mức độ đáng tin cậy của website này.</p>
+        </div>
+
+        <button class="action-button" data-toggle="clues">
+            Xem các dấu hiệu nhận diện
+        </button>
+
+        <section id="clues" class="clues" hidden>
+            <h3>Phân tích dấu hiệu phishing</h3>
+
+            <ul>
+                <li>Tên miền thực tế là reward-check.example.</li>
+                <li>Nội dung phúc lợi hấp dẫn có thể được sử dụng để kích thích người dùng hành động.</li>
+                <li>Thời hạn 24 giờ tạo cảm giác khẩn cấp.</li>
+                <li>Cần xác minh thông báo trực tiếp với bộ phận nhân sự qua kênh chính thức.</li>
+            </ul>
+        </section>
+
+        <a href="../index.html" class="back-link">
+            ← Quay lại danh sách tình huống
+        </a>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

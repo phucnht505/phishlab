@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Internal Portal - PhishLab</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="simulation-card">
+        <span class="badge">IT Internal Portal</span>
+
+        <h1>Thông báo cập nhật hệ thống</h1>
+
+        <div class="browser-bar">
+            <span>Địa chỉ website trong tình huống (mô phỏng)</span>
+            <code>https://portal.phishlab.test.verify.example/update</code>
+        </div>
+
+        <div class="notice-box">
+            <h2>Thông báo từ bộ phận IT</h2>
+
+            <p>Hệ thống nội bộ đang thực hiện nâng cấp quy trình bảo mật.</p>
+
+            <p>Người dùng được thông báo cần kiểm tra trạng thái hệ thống trong vòng 2 giờ.</p>
+
+            <p>Vui lòng xem xét nội dung thông báo và xác định các dấu hiệu đáng ngờ.</p>
+        </div>
+
+        <button class="action-button" data-toggle="clues">
+            Xem các dấu hiệu nhận diện
+        </button>
+
+        <section id="clues" class="clues" hidden>
+            <h3>Phân tích dấu hiệu phishing</h3>
+
+            <ul>
+                <li>Tên miền thực tế trong URL là verify.example, không phải phishlab.test.</li>
+                <li>Thông báo tạo áp lực thời gian bằng yêu cầu xử lý trong 2 giờ.</li>
+                <li>Người gửi cần được xác minh qua kênh liên lạc IT chính thức.</li>
+                <li>Không nên cung cấp mật khẩu hoặc OTP để xử lý thông báo này.</li>
+            </ul>
+        </section>
+
+        <a href="../index.html" class="back-link">
+            ← Quay lại danh sách tình huống
+        </a>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
