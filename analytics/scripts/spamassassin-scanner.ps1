@@ -175,13 +175,13 @@ function Invoke-SpamAssassinScan {
 
         $recipients = @(
             foreach ($address in @($Message.Raw.To)) {
-                $matches = [regex]::Matches(
+                $emailMatches = [regex]::Matches(
                     [string]$address,
                     '(?i)[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}'
                 )
 
-                foreach ($match in $matches) {
-                    $match.Value.ToLowerInvariant()
+                foreach ($emailMatch in $emailMatches) {
+                    $emailMatch.Value.ToLowerInvariant()
                 }
             }
         ) | Sort-Object -Unique
@@ -210,8 +210,8 @@ function Invoke-SpamAssassinScan {
                 continue
             }
 
-            $profile = $RecipientProfiles[$recipientAddress]
-            $profileThreshold = [double]$profile.RequiredScore
+            $recipientProfile = $RecipientProfiles[$recipientAddress]
+            $profileThreshold = [double]$recipientProfile.RequiredScore
 
             # Classify using the recipient-specific threshold
             if ($score -ge $profileThreshold) {
@@ -231,7 +231,7 @@ function Invoke-SpamAssassinScan {
                 SpamScore                 = $score
                 SpamAssassinRequiredScore = $requiredScore
                 RequiredScore             = $profileThreshold
-                FilterProfile             = [string]$profile.Profile
+                FilterProfile             = [string]$recipientProfile.Profile
                 Classification            = $classification
                 Rules                     = $rules
                 ScannedAt                 = (Get-Date).ToString("yyyy-MM-dd HH:mm:ss")
@@ -284,27 +284,6 @@ function Invoke-SpamAssassinScan {
 
         Write-Host ""
         Write-Host "Message scanned successfully: $messageId" -ForegroundColor Cyan
-
-        return $true
-
-
-        # Save CSV report
-        if (Test-Path $ReportFile) {
-            $record | Export-Csv -Path $ReportFile -NoTypeInformation -Append -Encoding UTF8
-        }
-        else {
-            $record | Export-Csv -Path $ReportFile -NoTypeInformation -Encoding UTF8
-        }
-
-        # Mark processed only after successful report write
-        Add-Content -Path $ProcessedFile -Value $messageId -Encoding UTF8
-        [void]$ProcessedIds.Add($messageId)
-
-        Write-Host ""
-        Write-Host "Scanned: $messageId" -ForegroundColor Cyan
-        Write-Host "Subject: $($record.Subject)"
-        Write-Host "Score: $score / $requiredScore"
-        Write-Host "Classification: $classification" -ForegroundColor Yellow
 
         return $true
     }
