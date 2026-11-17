@@ -1,0 +1,7 @@
+processed/
+raw/
+output/
+*.xlsx
+*.pdf
+__pycache__/
+*.py[cod]
